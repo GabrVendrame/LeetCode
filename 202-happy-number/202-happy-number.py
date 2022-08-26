@@ -1,6 +1,6 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        res = []
+        res = set()
         pow_n = 0
         while pow_n != 1:
             pow_n = 0
@@ -11,5 +11,5 @@ class Solution:
                 return False
             else:
                 n = pow_n
-                res.append(n)
+                res.add(n)
         return True
